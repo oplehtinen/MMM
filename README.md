@@ -1,5 +1,5 @@
 # M&MM - Modern & (Pseudo)Material Mumble
-https://github.com/dimits/MMM
+https://github.com/oplehtinen/MMM
 
 *Based on mumble-theme - The new default theme for Mumble formerly known as MetroMumble.*
 
@@ -19,7 +19,7 @@ All of these things are very much WIP.
 
 
 ## INSTALLATION
-- Download the newest [version](https://github.com/dimits/MMM)
+- Download the newest [version](https://github.com/oplehtinen/MMM/releases)
 - Unzip files somewhere. Mumble has a themes folder, too.
 - Go to Settings, User Interface, Browse
 - Select M&MM
