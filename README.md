@@ -1,5 +1,5 @@
 # M&MM - Modern & (Pseudo)Material Mumble
-https://github.com/astraalivankila/TBA
+https://github.com/dimits/MMM
 
 *Based on mumble-theme - The new default theme for Mumble formerly known as MetroMumble.*
 
