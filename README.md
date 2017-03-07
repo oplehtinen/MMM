@@ -18,6 +18,13 @@ All of these things are very much WIP.
 ![Theme Preview](preview.png)
 
 
+## INSTALLATION
+- Download the newest [version](https://github.com/dimits/MMM)
+- Unzip files somewhere. Mumble has a themes folder, too.
+- Go to Settings, User Interface, Browse
+- Select M&MM
+- Restart
+
 #### TO DO:
 - [ ] Clean up the code
 - [ ] Figure out a lot more selectors and QSS styling
