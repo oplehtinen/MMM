@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg2" inkscape:output_extension="org.inkscape.output.svg.inkscape" inkscape:version="0.47pre1" sodipodi:docname="mumble.svg" sodipodi:version="0.32" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 400"
+	 style="enable-background:new 0 0 400 400;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FAFAFA;}
+	.st1{fill:#212121;}
+	.st2{display:none;fill:#212121;}
+</style>
+<circle class="st0" cx="200" cy="200" r="199"/>
+<path class="st0" d="M397,353.2V46.8C397,22.6,377.4,3,353.2,3H46.8C22.6,3,3,22.6,3,46.8v306.4C3,377.4,22.6,397,46.8,397h306.4
+	C377.4,397,397,377.4,397,353.2z"/>
+<path class="st1" d="M197,41C125.2,41,67,99.2,67,171v101.1c0,23.9,19.5,43.3,43.3,43.3h43.3V200H95.7v-28.9
+	C95.7,115.2,141,70,196.9,70S298,115.2,298,171.1V200h-57.8v115.6H298V330H197v28.9h86.7c23.9,0,43.3-19.5,43.3-43.3V171.1
+	C327,99.3,268.8,41,197,41z"/>
+<path class="st2" d="M192.5,27.2c-74,0-134,60-134,134v104.2c0,24.6,20,44.7,44.7,44.7h44.7V191H88.3v-29.8
+	C88.3,103.7,135,57,192.5,57s104.2,46.7,104.2,104.2V191h-59.6v119.1h59.6v17.8H192.5v29.8h89.3c24.6,0,44.7-20,44.7-44.7V161.2
+	C326.5,87.2,266.5,27.2,192.5,27.2z"/>
+</svg>

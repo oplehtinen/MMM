@@ -1,0 +1,535 @@
+/*
+		###################################################
+
+		M&MM - Modern & (Pseudo)Material Mumble
+		https://github.com/astraalivankila/TBA
+
+		-------------
+		version 0.10
+		-------------
+
+		--------------------------------------------------
+		Based on mumble-theme - The new default theme
+		for Mumble formerly known as MetroMumble.
+		---------------------------------------------------
+
+		---------------------------------------------------
+		(c) Olli-Pekka Lehtinen
+		Licensed under MIT License
+		See LICENSE
+		---------------------------------------------------
+
+
+		---------------------------------------------------
+		MATERIAL DESIGN IS KIND OF A
+		STRETCH: SHADOWS WORK LIKE
+		SHIT IN QT SO GOOD LUCK WITH THAT PAL
+		---------------------------------------------------
+
+		###################################################
+*/
+
+//	---------------------------------------------------
+//	This is a file you could modify
+//	if you are making your own skin.
+//	See README.md
+//	---------------------------------------------------
+
+
+// Import skin definitions
+@import 'Imports/Lite Definitions';
+
+// Import base theme CSS
+@import 'Imports/Base Theme';
+
+/*
+		---------------------------------------------------
+		Add or import your own custom QSS below
+		---------------------------------------------------
+
+		###################################################
+		!! 		THINK TWICE BEFORE MODIFYING THIS FILE		 !!
+		###################################################
+
+		---------------------------------------------------
+		This file is still a mess.
+		At this moment you end up breaking a lot of stuff.
+		Also, migraine.
+		---------------------------------------------------
+
+*/
+
+$slider-fill-border: none;
+
+$item-selected-inactive-border: 0px solid #C4C4C4;
+//$sub-bg: #FAFAFA;
+$sub-hover: #FFF;
+
+	/*
+		SERVER/CHANENL LIST AND OTHER LIST SETUPS.
+		THE MIN-WIDTH IS THERE FOR A REASON:
+		IF YOU USE 640p CRT DO NOT USE THIS THEME.
+	*/
+
+QTreeView {
+	border-left:2px solid $base-border;
+	border:0px;
+	background-color: $base-bg;
+	min-width:250px;
+	min-height:500px;
+}
+
+/*
+GIVES US MORE ROOM FOR THE USER/CHANNEL AND SERVER LISTS.
+*/
+
+QTreeView::item
+{
+color: $base-text;
+border:2px solid transparent;
+border-left:0;
+border-right:0;
+padding-top:5px;
+padding-bottom:5px;
+selection-color: $base-text;
+border-radius:0;
+min-height:20px;
+}
+
+
+	/*
+		HIGHLIGHT THE MAIN CHANNELS AND OTHER KINDA-HEADER THINGS.
+		WOULD DO MORE HIGHLIGHTING IF I KNEW WHERE TO POINT THIS QSS TO.
+	*/
+
+QTreeView::item:has-children {
+	border-bottom: 2px solid $base-border;
+}
+
+QTreeView::item:has-children:selected {
+	border-bottom: 2px solid $base-border;
+}
+QTreeView::item:has-children:hover {
+	border-bottom: 2px solid $base-border;
+}
+
+QTreeView::item:first,
+QTreeView::item:only-one
+	{
+  // PLACEHOLDER MIGHT NEED SOME DAY
+	}
+
+QTreeView::item:last,
+QTreeView::item:only-one
+	{
+	  // PLACEHOLDER MIGHT NEED SOME DAY
+	}
+
+QTreeView::item:selected
+{
+	background-color:$sub-bg;
+}
+
+QTreeView::item:selected:active
+{
+		//padding-left:0px;
+		background-color:$sub-bg;
+}
+
+QTreeView::item:focus {
+	background-color:$sub-bg;
+
+}
+
+QTreeView::item:hover
+{
+	background-color:$sub-bg;
+	border:2px solid transparent;
+	border-left:0;
+	border-right:0;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin:0px;
+}
+
+
+	/*
+		SOME PRETTY DUMB STUFF
+		TO GLUE THE BRANCH THINGS NICELY
+		(BRANCH = THE LITTLE ARROW
+		YOU CLICK TO EXPAND SOMETHING)
+	*/
+
+QTreeView::branch
+{
+	margin-bottom:0px;
+}
+
+
+QTreeView::branch:has-children:closed
+{
+	border-bottom: 2px solid $base-border;
+	margin-bottom:0px;
+
+}
+QTreeView::branch:has-children:open
+{
+	border-bottom: 2px solid $base-border;
+	margin-bottom:0px;
+}
+QTreeView::branch:selected
+{
+	background-color:$sub-bg;
+	padding-right: 0px;
+  border-left: 0px;
+
+}
+
+QTreeView::branch:selected:active
+{
+	background-color:$sub-bg;
+	padding-right: 0px;
+  border-left: 0px;
+	margin-left: 0px;
+
+}
+
+QTreeView::branch
+{
+	border-image:none;
+	image:none;
+	margin-left:3px;
+	padding-left:3px;
+}
+
+QTreeView::branch:has-children:closed
+{
+	image:url(skin:controls/branch_closed.svg);
+}
+
+QTreeView::branch:has-children:open
+{
+	image:url(skin:controls/branch_open.svg);
+}
+
+
+
+
+ QDockWidget#qdwLog:item {padding: 509px; }
+
+
+
+
+
+	/*
+		MAKE THE USER SET COMMENT
+		AND OTHER TOOLTIP-STYLE
+		THINGS WHITE.
+		LOTS OF DUPLICATE CODE FROM
+		THE BASE THEME; PROCEED WITH CAUTION
+	*/
+
+ApplicationPalette {
+	qproperty-window: $dialog-bg;
+	qproperty-windowtext: $base-text;
+	qproperty-windowtext_disabled: $base-text-disabled;
+
+	qproperty-base: $dialog-bg;
+	qproperty-alternatebase: $median-bg;
+	qproperty-text: $sub-text;
+	qproperty-text_disabled: $base-text-disabled;
+
+	qproperty-tooltipbase: #FFF;
+	qproperty-tooltiptext: $base-text;
+	qproperty-tooltiptext_disabled: $base-text-disabled;
+
+	qproperty-brighttext: $highlight-text;
+	qproperty-brighttext_disabled: $base-text-disabled;
+	qproperty-highlight: $highlight-bg;
+	qproperty-highlightedtext: $highlight-text;
+	qproperty-highlightedtext_disabled: $base-text-disabled;
+
+	qproperty-button: $button-bg;
+	qproperty-buttontext: $sub-text;
+	qproperty-buttontext_disabled: $base-text-disabled;
+
+	qproperty-link: $link;
+	qproperty-linkvisited: $link;
+
+	qproperty-light: $base-border;
+	qproperty-midlight: transparent;
+	qproperty-mid: $base-border;
+	qproperty-dark: transparent;
+	qproperty-shadow: $base-border;
+}
+
+
+
+	/*
+		THIS IS WHERE ALL THE BUTTONS
+		ARE LIKE MUTE AND DEAFEN
+	*/
+
+QToolBar
+{
+	padding: 8px;
+	border-bottom: 1px solid $base-border;
+}
+
+	/*
+		THE MENU BAR
+	*/
+
+QMenuBar
+{
+	background-color: #FFF;
+	border-bottom: 1px solid $base-border;
+	border-radius: 20px;
+	padding:5px;
+	padding-bottom:0px;
+	color: $sub-text;
+	padding-left:2px;
+}
+
+	/*
+		CHANGES THE MUMBLE TITLE TO MUMBLE
+		AKA HIDE THE UGLY DEV BUILD NUMBER
+	*/
+
+QMainWindow#MainWindow {
+	qproperty-windowTitle: "Mumble";
+	qproperty-frame: false;
+}
+
+/*
+	!!!!!!! NEEDS SOME WORK !!!!!!!!
+	WHEN YOU ACTIVATE THE CHAT INPUT IT SAYS type.. IN GRAY.
+	ALSO MAKES THE CHAT BAR A BIT TALLER.
+	BE CAREFUL; CHANGING THE MIN-HEIGHT PROBABLY BREAKS EVERYTHING
+	MAKES THE FONT BIGGER; TOO
+*/
+
+QTextEdit#qteChat {
+qproperty-placeholderText: "type...";
+qproperty-documentTitle: "type...";
+qproperty-sizeAdjustPolicy: AdjustToContents;
+qproperty-cursor: IBeam;
+min-height:40px;
+padding:5px;
+margin-left: 5px;
+border:0px solid transparent;
+font-size: $font-size-big;
+}
+
+/*
+	YEAH
+	THERE IS
+	PROBABLY A _LOT_
+	DUPLICATES WITH
+	THE ABOVE CODE
+	BUT YEAH
+*/
+
+LogTextBrowser,
+#qdsChat
+{
+	//margin:0 2px;
+	min-height:10px;
+	min-width:40px;
+	border-color: #FFF;
+	border:0px solid transparent;
+	font-size: $font-size-big;
+	color: $base-text;
+	font-weight:200;
+}
+
+/*
+	YEAH..
+*/
+
+QTextBrowser {
+padding-left:5px;
+border:0px solid transparent;
+color: $base-text;
+}
+
+/*
+	MAKES THE CHAT LOG TEXT
+	DIFFERENT SHADES OF GRAY
+	(IN THE FUTURE)
+	FOR NOW IT'S JUST DARK GRAY OKAY
+*/
+
+.log * {
+border: 0px solid #FFF;
+}
+
+.log-time {
+color: $base-text-disabled;
+}
+
+.log-server {
+color: $base-text;
+font-weight:bold;
+border: 0px solid #000;
+}
+
+.log-channel {
+color: $base-text;
+font-weight: bold;
+border: 0px solid #000;
+}
+
+.log-privilege {
+color: $base-text;
+font-weight: normal;;
+}
+
+.log-target {
+color: $base-text;
+font-weight: bold;
+}
+
+.log-source {
+color: $base-text;
+font-weight: bold;
+border: 0px solid transparent;
+}
+
+.log-source:hover {
+color: $base-text;
+font-weight: bold;
+}
+
+.log-source:pressed {
+color: $base-text;
+font-weight: bold;
+}
+
+.log-private {
+border: 0px solid transparent;
+}
+
+
+
+
+/*
+	MAKE THE SCROLLBAR CORNERS ROUND AND OTHER SCROLLBAR STUFF
+*/
+
+QScrollBar
+{
+	Width:10px;
+	background:RGBA(0,0,0,0%);
+}
+
+QScrollBar:vertical
+{
+
+Width:10px;
+Background:RGBA(0,0,0,0%);
+Padding-top:2px 2px;
+Padding-bottom:2px;
+Margin:0px, 0px, 0px, 0px;
+}
+
+QScrollBar::handle:vertical
+{
+width:7px;
+background:$scrollbar-handle;
+border-radius:4px;
+min-height:20px;
+}
+
+QScrollBar::handle:vertical:hover
+{
+width:7px;
+background:$scrollbar-handle-hover;
+border-radius:4px;
+min-height:20px;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical
+{
+Background:transparent;
+Border-radius:4PX;
+}
+
+/*
+MOST LIKELY DUPLICATE STUFF WHICH WAS LEFT OVER FROM CLODE CLEANUP
+*/
+
+QToolTip,
+QWhatsThis
+	{
+		font-size:$font-size-small;
+		min-height:1.3em;
+		border: 0px solid $control-icon;
+		border-radius: 0;
+		color:$sub-text;
+
+	}
+
+
+QToolBar
+	{
+		background-color:$sub-bg;
+		spacing:0;
+		//padding:2px;
+	}
+
+	QToolBar::separator
+	{
+		background:$sub-highlight;
+		height:0px;
+		margin:$base-padding;
+		width:0px;
+	}
+
+	QToolBar::separator:hover
+	{
+		background:$sub-highlight;
+		border:0;
+	}
+
+
+/*
+I THINK THIS BIT IS COMPLETELY USELESS
+*/
+
+
+QScrollBar::left-arrow,
+QScrollBar::right-arrow,
+QScrollBar::up-arrow,
+QScrollBar::down-arrow,
+QScrollBar::sub-line,
+QScrollBar::add-line,
+QScrollBar::add-page,
+QScrollBar::sub-page
+{
+	height:0;
+	width:0;
+	border-radius:0;
+	border:0;
+}
+
+/*
+SOME LEFTOVER CODE I THINK; THE IDEA WAS TO
+REMOVE BLUE FOCUS BORDER FROM CHAT LOG AND INPUT
+BUT THAT IS ALL DONE ABOVE SO
+*/
+
+QCheckBox::indicator:focus,
+//QTreeView::indicator:focus,
+QRadioButton::indicator:focus,
+QComboBox:focus,
+QLineEdit:focus,
+//QTextEdit:focus,
+//QPlainTextEdit:focus,
+QSpinBox:focus,
+QAbstractSpinBox:focus,
+QComboBox:editable:focus
+{
+	border-color:$base-border-focus;
+}
